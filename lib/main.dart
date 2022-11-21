@@ -156,7 +156,7 @@ class MyApp extends State<App> {
     return Scaffold(
       extendBody: true,
       body: Visibility(
-        visible: true,
+        visible: false,
         replacement: CodeWidget(
           title: "azkaoksoas",
           code: defaultCode,
@@ -261,30 +261,42 @@ class CodeWidgetState extends State<CodeWidget> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 15,
-                  width: 15,
-                  margin: const EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(20)),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 15,
+                      width: 15,
+                      margin: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(20)),
+                    ),
+                    Container(
+                      height: 15,
+                      width: 15,
+                      margin: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.circular(20)),
+                    ),
+                    Container(
+                      height: 15,
+                      width: 15,
+                      margin: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(20)),
+                    ),
+                  ],
                 ),
-                Container(
-                  height: 15,
-                  width: 15,
-                  margin: const EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.circular(20)),
+                Text(
+                  widget.title,
+                  style: TextStyle(color: Colors.white),
+                  overflow: TextOverflow.clip,
                 ),
-                Container(
-                  height: 15,
-                  width: 15,
-                  margin: const EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(20)),
-                ),
+                SizedBox.shrink(),
               ],
             ),
             Flexible(
               child: CodeField(
-                background: Colors.transparent, 
+                background: Colors.transparent,
                 controller: CodeController(
                   text: widget.code,
                   language: dart,

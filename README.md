@@ -1,6 +1,10 @@
 # code_shot_flutter
 
-Screenshot code dengan flutter
+Code to Image Flutter, Project experiment bikin screenshot dengan flutter
 
 
 ![Result](/screenshot/result.png)
+
+Testing:
+
+https://
