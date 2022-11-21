@@ -32,4 +32,4 @@ https://code-shot-azkadev.up.railway.app/?title=azka&code=azkadev
 
 Testing Local:
 
-http://localhost:8000/?title=azkadev&code=azkadev
+http://localhost:8080/?title=azkadev&code=azkadev

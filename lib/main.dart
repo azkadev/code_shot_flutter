@@ -156,7 +156,7 @@ class MyApp extends State<App> {
     return Scaffold(
       extendBody: true,
       body: Visibility(
-        visible: false,
+        visible: true,
         replacement: CodeWidget(
           title: "azkaoksoas",
           code: defaultCode,
