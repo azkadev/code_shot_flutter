@@ -5,6 +5,12 @@ Code to Image Flutter, Project experiment bikin screenshot dengan flutter
 
 ![Result](/screenshot/result.png)
 
+
+
+https://user-images.githubusercontent.com/82513502/202985333-ade8e7f7-5e8d-490f-922e-628527c15fab.mp4
+
+
+
 Live Demo:
 https://code-shot-azkadev.up.railway.app/?title=azka&code=azkadev
 
