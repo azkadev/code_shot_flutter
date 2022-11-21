@@ -28,10 +28,13 @@ https://user-images.githubusercontent.com/82513502/202985333-ade8e7f7-5e8d-490f-
         >
     </a>
     <br>
-    <b>Author Docs Azkadev 🔥</b>
+    <b>Author Azkadev 🔥</b>
     <br>
 </p>
  
+### About this
+
+Repo ini hanya project biasa, dan hanya sebuah testing kalau flutter gak cuma bikin app tapi bikin gambar apapun tergantung pilot
 
 ### Support
 > Tolong beri saya dukungan dengan cara follow up semua social media saya / donate di github ya
