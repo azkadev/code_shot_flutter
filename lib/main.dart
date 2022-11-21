@@ -143,11 +143,6 @@ class MyApp extends State<App> {
     await app.listen(int.parse(Platform.environment["PORT"] ?? "8080"), Platform.environment["HOST"] ?? "0.0.0.0");
   }
 
-  final controller = CodeController(
-    text: "javaFactorialSnippet",
-    language: dart,
-  );
-
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
@@ -262,6 +257,7 @@ class CodeWidgetState extends State<CodeWidget> {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Row(
                   mainAxisSize: MainAxisSize.min,
