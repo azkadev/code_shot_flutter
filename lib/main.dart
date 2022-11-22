@@ -263,7 +263,7 @@ class CodeWidgetState extends State<CodeWidget> {
         ),
         margin: const EdgeInsets.all(10),
         padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(color: const Color.fromARGB(255, 27,25,38), borderRadius: BorderRadius.circular(10)),
+        decoration: BoxDecoration(color: const Color.fromARGB(255, 27, 25, 38), borderRadius: BorderRadius.circular(10)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
@@ -307,9 +307,18 @@ class CodeWidgetState extends State<CodeWidget> {
               child: CodeTheme(
                 data: CodeThemeData(
                   styles: const {
-                    'root': TextStyle(backgroundColor: Color(0xff011627), color: Color(0xffd6deeb)),
-                    'keyword': TextStyle(color: Color(0xffc792ea), fontStyle: FontStyle.normal),
-                    'built_in': TextStyle(color: Color(0xffaddb67), fontStyle: FontStyle.normal),
+                    'root': TextStyle(
+                      backgroundColor: Color(0xff011627),
+                      color: Color.fromARGB(255, 186, 184, 221),
+                    ),
+                    'keyword': TextStyle(
+                      color: Color(0xffc792ea),
+                      fontStyle: FontStyle.normal,
+                    ),
+                    'built_in': TextStyle(
+                      color: Color.fromARGB(255, 0, 185, 219),
+                      fontStyle: FontStyle.normal,
+                    ),
                     'type': TextStyle(color: Color(0xff82aaff)),
                     'literal': TextStyle(color: Color(0xffff5874)),
                     'number': TextStyle(color: Color(0xffF78C6C)),
@@ -319,9 +328,15 @@ class CodeWidgetState extends State<CodeWidget> {
                     'symbol': TextStyle(color: Color(0xff82aaff)),
                     'class': TextStyle(color: Color(0xffffcb8b)),
                     'function': TextStyle(color: Color(0xff82AAFF)),
-                    'title': TextStyle(color: Color(0xffDCDCAA), fontStyle: FontStyle.normal),
+                    'title': TextStyle(
+                      color: Color.fromARGB(255, 0, 185, 219),
+                      fontStyle: FontStyle.normal,
+                    ),
                     'params': TextStyle(color: Color(0xff7fdbca)),
-                    'comment': TextStyle(color: Color(0xff637777), fontStyle: FontStyle.italic),
+                    'comment': TextStyle(
+                      color: Color.fromARGB(143, 74, 88, 88),
+                      fontStyle: FontStyle.normal,
+                    ),
                     'doctag': TextStyle(color: Color(0xff7fdbca)),
                     'meta': TextStyle(color: Color(0xff82aaff)),
                     'meta-keyword': TextStyle(color: Color(0xff82aaff)),
