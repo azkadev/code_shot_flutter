@@ -56,13 +56,16 @@ class MyApp extends State<App> {
   }
 
   String defaultCode = """
-void main(List<String> args) {
-  print("Hello World Azkadev");
-  if (true){
+void main() {
+  String code_shot_about = \"\"\"
+  Azkadev Creator Code Shot Flutter
 
-  } else {
+  Github: github.com/azkadev
+  Youtube: youtube.com/@b f[]azkadev
+  Telegram: t.me/azkadev
 
-  }
+  \"\"\";
+  print(code_shot_about);
 }
 """;
 
@@ -147,7 +150,7 @@ void main(List<String> args) {
     return Scaffold(
       extendBody: true,
       body: Visibility(
-        visible: !kDebugMode,
+        visible: true,
         replacement: SingleChildScrollView(
           child: CodeWidget(
             title: "azkaoksoas",

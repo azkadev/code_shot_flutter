@@ -5,7 +5,7 @@ import "package:http/http.dart" as http;
 
 void main() async {
   var res = await http.post(
-    Uri.parse("http://localhost:8080"),
+    Uri.parse("https://code-shot-azkadev.up.railway.app"),
     headers: {"Content-Type": "application/json"},
     body: json.encode(
       {
@@ -16,7 +16,7 @@ void main() {
 Azkadev Creator Code Shot Flutter
 
 Github: github.com/azkadev
-Youtube: youtube.com/!azkadev
+Youtube: youtube.com/@azkadev
 Telegram: t.me/azkadev
 
 \"\"\";
