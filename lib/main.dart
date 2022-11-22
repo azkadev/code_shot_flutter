@@ -147,7 +147,7 @@ void main(List<String> args) {
     return Scaffold(
       extendBody: true,
       body: Visibility(
-        visible: false,
+        visible: !kDebugMode,
         replacement: SingleChildScrollView(
           child: CodeWidget(
             title: "azkaoksoas",
@@ -157,7 +157,7 @@ void main(List<String> args) {
               pageState.codeController.text = "";
               for (var i = 0; i < codes.length; i++) {
                 String code = codes[i];
-                await Future.delayed(const Duration(milliseconds: 1));
+                await Future.delayed(const Duration(milliseconds: 10));
                 pageState.codeController.text += code;
               }
             },
