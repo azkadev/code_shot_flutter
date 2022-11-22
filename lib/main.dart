@@ -50,31 +50,23 @@ class MyApp extends State<App> {
     },
   );
   @override
-  void initState() {
-    // TODO: implement initState
+  void initState() { 
     super.initState();
     task();
   }
 
-  String defaultCode = File("/home/hexaminate/Documents/HEXAMINATE/app/code_shot_flutter/lib/main.dart").readAsStringSync();
+  String defaultCode = """
+void main(List<String> args) {
+  print("Hello World Azkadev");
+  if (true){
 
-//   """
-// void main(List<String> args) {
-//   print("Hello World Azkadev");
-//   if (true){
+  } else {
 
-//   } else {
+  }
+}
+""";
 
-//   }
-// }
-// """;
-
-  task() async {
-    // Timer.periodic(const Duration(seconds: 1), (timer) async {
-    //   setState(() {
-    //     items.add(ClientData(title: "Data ${DateTime.now().toString()}", timeStamp: DateTime.now().millisecondsSinceEpoch));
-    //   });
-    // });
+  task() async { 
     Timer.periodic(const Duration(seconds: 2), (timer) async {
       setState(() {
         items = items.where((element) => !element.isSend).toList();
@@ -160,7 +152,15 @@ class MyApp extends State<App> {
           child: CodeWidget(
             title: "azkaoksoas",
             code: defaultCode,
-            onInit: (BuildContext context, CodeWidget page, CodeWidgetState pageState) async {},
+            onInit: (BuildContext context, CodeWidget page, CodeWidgetState pageState) async {
+              List<String> codes = page.code.characters.toList();
+              pageState.codeController.text = "";
+              for (var i = 0; i < codes.length; i++) {
+                String code = codes[i];
+                await Future.delayed(const Duration(milliseconds: 1));
+                pageState.codeController.text += code;
+              }
+            },
           ),
         ),
         child: ListView.builder(
@@ -196,24 +196,6 @@ class MyApp extends State<App> {
           },
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () async {
-      //     print(items);
-      //     return;
-      //     // try {
-      //     //   setState(() {
-      //     //     items = items.where((element) => !element.isFinished).toList();
-      //     //   });
-      //     //   await Future.delayed(const Duration(milliseconds: 500));
-      //     //   setState(() {
-      //     //     items.addAll(List.generate(10, (index) => ClientData(title: "haha ${index}")));
-      //     //   });
-      //     // } catch (e) {
-      //     //   print(e);
-      //     // }
-      //   },
-      //   child: const Icon(Icons.add),
-      // ),
     );
   }
 }
@@ -239,13 +221,6 @@ class CodeWidgetState extends State<CodeWidget> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((Duration duration) async {
       widget.onInit.call(context, widget, this);
-      List<String> codes = widget.code.characters.toList();
-      codeController.text = "";
-      for (var i = 0; i < codes.length; i++) {
-        String code = codes[i];
-        await Future.delayed(const Duration(milliseconds: 1));
-        codeController.text += code;
-      }
     });
   }
 
@@ -270,7 +245,7 @@ class CodeWidgetState extends State<CodeWidget> {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              mainAxisSize: MainAxisSize.min,
+              mainAxisSize: MainAxisSize.max,
               children: [
                 Row(
                   mainAxisSize: MainAxisSize.min,
