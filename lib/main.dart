@@ -1,24 +1,15 @@
-// ignore_for_file: unused_local_variable, duplicate_ignore
+// ignore_for_file: unused_local_variable, duplicate_ignore, use_full_hex_values_for_flutter_colors, depend_on_referenced_packages
 
 import 'dart:io';
-import 'dart:math';
 import 'package:alfred/alfred.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
 import 'dart:async';
-import 'dart:isolate';
-import 'dart:math';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'dart:ui' as ui;
 
 import 'package:flutter_code_editor/flutter_code_editor.dart';
-import 'package:flutter_code_editor/flutter_code_editor.dart';
-import 'package:flutter_highlight/themes/monokai-sublime.dart';
-import 'package:highlight/languages/java.dart';
 import 'package:highlight/languages/dart.dart';
 
 void main() {
@@ -64,6 +55,19 @@ class MyApp extends State<App> {
     super.initState();
     task();
   }
+
+  String defaultCode = File("/home/hexaminate/Documents/HEXAMINATE/app/code_shot_flutter/lib/main.dart").readAsStringSync();
+
+//   """
+// void main(List<String> args) {
+//   print("Hello World Azkadev");
+//   if (true){
+
+//   } else {
+
+//   }
+// }
+// """;
 
   task() async {
     // Timer.periodic(const Duration(seconds: 1), (timer) async {
@@ -151,11 +155,13 @@ class MyApp extends State<App> {
     return Scaffold(
       extendBody: true,
       body: Visibility(
-        visible: true,
-        replacement: CodeWidget(
-          title: "azkaoksoas",
-          code: defaultCode,
-          onInit: (BuildContext context, CodeWidget page, CodeWidgetState pageState) async {},
+        visible: false,
+        replacement: SingleChildScrollView(
+          child: CodeWidget(
+            title: "azkaoksoas",
+            code: defaultCode,
+            onInit: (BuildContext context, CodeWidget page, CodeWidgetState pageState) async {},
+          ),
         ),
         child: ListView.builder(
           primary: true,
@@ -181,7 +187,9 @@ class MyApp extends State<App> {
                     items[index].isFinished = true;
                   });
                 } catch (e) {
-                  print(e);
+                  if (kDebugMode) {
+                    print(e);
+                  }
                 }
               },
             );
@@ -210,12 +218,6 @@ class MyApp extends State<App> {
   }
 }
 
-String defaultCode = """
-void main(List<String> args) {
-  print("Hello World Azkadev");
-}
-""";
-
 class CodeWidget extends StatefulWidget {
   final void Function(BuildContext context, CodeWidget page, CodeWidgetState pageState) onInit;
 
@@ -228,11 +230,22 @@ class CodeWidget extends StatefulWidget {
 }
 
 class CodeWidgetState extends State<CodeWidget> {
+  late CodeController codeController = CodeController(
+    text: widget.code,
+    language: dart,
+  );
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((Duration duration) async {
       widget.onInit.call(context, widget, this);
+      List<String> codes = widget.code.characters.toList();
+      codeController.text = "";
+      for (var i = 0; i < codes.length; i++) {
+        String code = codes[i];
+        await Future.delayed(const Duration(milliseconds: 1));
+        codeController.text += code;
+      }
     });
   }
 
@@ -250,7 +263,7 @@ class CodeWidgetState extends State<CodeWidget> {
         ),
         margin: const EdgeInsets.all(10),
         padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(10)),
+        decoration: BoxDecoration(color: const Color.fromARGB(255, 27,25,38), borderRadius: BorderRadius.circular(10)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
@@ -284,18 +297,63 @@ class CodeWidgetState extends State<CodeWidget> {
                 ),
                 Text(
                   widget.title,
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                   overflow: TextOverflow.clip,
                 ),
-                SizedBox.shrink(),
+                const SizedBox.shrink(),
               ],
             ),
             Flexible(
-              child: CodeField(
-                background: Colors.transparent,
-                controller: CodeController(
-                  text: widget.code,
-                  language: dart,
+              child: CodeTheme(
+                data: CodeThemeData(
+                  styles: const {
+                    'root': TextStyle(backgroundColor: Color(0xff011627), color: Color(0xffd6deeb)),
+                    'keyword': TextStyle(color: Color(0xffc792ea), fontStyle: FontStyle.normal),
+                    'built_in': TextStyle(color: Color(0xffaddb67), fontStyle: FontStyle.normal),
+                    'type': TextStyle(color: Color(0xff82aaff)),
+                    'literal': TextStyle(color: Color(0xffff5874)),
+                    'number': TextStyle(color: Color(0xffF78C6C)),
+                    'regexp': TextStyle(color: Color(0xff5ca7e4)),
+                    'string': TextStyle(color: Color(0xffecc48d)),
+                    'subst': TextStyle(color: Color(0xffd3423e)),
+                    'symbol': TextStyle(color: Color(0xff82aaff)),
+                    'class': TextStyle(color: Color(0xffffcb8b)),
+                    'function': TextStyle(color: Color(0xff82AAFF)),
+                    'title': TextStyle(color: Color(0xffDCDCAA), fontStyle: FontStyle.normal),
+                    'params': TextStyle(color: Color(0xff7fdbca)),
+                    'comment': TextStyle(color: Color(0xff637777), fontStyle: FontStyle.italic),
+                    'doctag': TextStyle(color: Color(0xff7fdbca)),
+                    'meta': TextStyle(color: Color(0xff82aaff)),
+                    'meta-keyword': TextStyle(color: Color(0xff82aaff)),
+                    'meta-string': TextStyle(color: Color(0xffecc48d)),
+                    'section': TextStyle(color: Color(0xff82b1ff)),
+                    'tag': TextStyle(color: Color(0xff7fdbca)),
+                    'name': TextStyle(color: Color(0xff7fdbca)),
+                    'builtin-name': TextStyle(color: Color(0xff7fdbca)),
+                    'attr': TextStyle(color: Color(0xff7fdbca)),
+                    'attribute': TextStyle(color: Color(0xff80cbc4)),
+                    'variable': TextStyle(color: Color(0xffaddb67)),
+                    'bullet': TextStyle(color: Color(0xffd9f5dd)),
+                    'code': TextStyle(color: Color(0xff80CBC4)),
+                    'emphasis': TextStyle(color: Color(0xffc792ea), fontStyle: FontStyle.normal),
+                    'strong': TextStyle(color: Color(0xffaddb67), fontWeight: FontWeight.bold),
+                    'formula': TextStyle(color: Color(0xffc792ea)),
+                    'link': TextStyle(color: Color(0xffff869a)),
+                    'quote': TextStyle(color: Color(0xff697098), fontStyle: FontStyle.normal),
+                    'selector-tag': TextStyle(color: Color(0xffff6363)),
+                    'selector-id': TextStyle(color: Color(0xfffad430)),
+                    'selector-class': TextStyle(color: Color(0xffaddb67), fontStyle: FontStyle.normal),
+                    'selector-attr': TextStyle(color: Color(0xffc792ea), fontStyle: FontStyle.normal),
+                    'selector-pseudo': TextStyle(color: Color(0xffc792ea), fontStyle: FontStyle.normal),
+                    'template-tag': TextStyle(color: Color(0xffc792ea)),
+                    'template-variable': TextStyle(color: Color(0xffaddb67)),
+                    'addition': TextStyle(color: Color(0xffaddb67ff), fontStyle: FontStyle.normal),
+                    'deletion': TextStyle(color: Color(0xffef535090), fontStyle: FontStyle.normal),
+                  },
+                ),
+                child: CodeField(
+                  background: Colors.transparent,
+                  controller: codeController,
                 ),
               ),
             ),
