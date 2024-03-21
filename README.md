@@ -1,80 +1,41 @@
-# code_shot_flutter
+IyBjb2RlX3Nob3RfZmx1dHRlcgoKQ29kZSB0byBJbWFnZSBGbHV0dGVyLCBQ
+cm9qZWN0IGV4cGVyaW1lbnQgYmlraW4gc2NyZWVuc2hvdCBkZW5nYW4gZmx1
+dHRlcgoKCiFbUmVzdWx0XSgvc2NyZWVuc2hvdC9yZXN1bHQucG5nKQoKCgpo
+dHRwczovL3VzZXItaW1hZ2VzLmdpdGh1YnVzZXJjb250ZW50LmNvbS84MjUx
+MzUwMi8yMDI5ODUzMzMtYWRlOGU3ZjctNWU4ZC00OTBmLTkyMmUtNjI4NTI3
+YzE1ZmFiLm1wNAoKCgpodHRwczovL3VzZXItaW1hZ2VzLmdpdGh1YnVzZXJj
+b250ZW50LmNvbS84MjUxMzUwMi8yMDMyNDMyNDItMzlhZGM3ODMtYWU3NC00
+NmIxLTgwZGEtZWM1OTBmOGM3NDdhLm1wNAoKCi0tLQoKPHAgYWxpZ249ImNl
+bnRlciI+CiAgICA8YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vYXprYWRl
+diI+CiAgICAgICAgPGltZyBzcmM9Imh0dHBzOi8vdGVsZWdyYS5waC9maWxl
+L2U5MGJkZWFiODM5MGI4YzBkOWRmMi5wbmciIGFsdD0iU3BlY3RhIgogICAg
+ICAgICAgICB3aWR0aD0iMzEyIgogICAgICAgICAgICBoZWlnaHQ9IjMxMiI+
+CiAgICA8L2E+CiAgICA8YnI+CiAgICA8YSBocmVmPSJodHRwczovL3lvdXR1
+YmUuY29tL2MvZ2FsYXhldXMiPgogICAgICAgIDxpbWcKICAgICAgICAgICAg
+c3JjPSJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vYXprYWRl
+di9hemthZGV2L21haW4vYXNzZXRzL2ltYWdlcy9wb3dlcmVkX2dhbGF4ZXVz
+LnBuZyIKICAgICAgICAgICAgYWx0PSJnYWxheGV1cyIKICAgICAgICAgICAg
+d2lkdGg9IjM1MCIKICAgICAgICAgICAgaGVpZ2h0PSI4MCIKICAgICAgICA+
+CiAgICA8L2E+CiAgICA8YnI+CiAgICA8Yj5BdXRob3IgQXprYWRldiDwn5Sl
+PC9iPgogICAgPGJyPgo8L3A+CiAKIyMjIEFib3V0IHRoaXMKClJlcG8gaW5p
+IGhhbnlhIHByb2plY3QgYmlhc2EsIGRhbiBoYW55YSBzZWJ1YWggdGVzdGlu
+ZyBrYWxhdSBmbHV0dGVyIGdhayBjdW1hIGJpa2luIGFwcCB0YXBpIGJpa2lu
+IGdhbWJhciBhcGFwdW4gdGVyZ2FudHVuZyBwaWxvdAoKIyMjIFN1cHBvcnQK
+PiBUb2xvbmcgYmVyaSBzYXlhIGR1a3VuZ2FuIGRlbmdhbiBjYXJhIGZvbGxv
+dyB1cCBzZW11YSBzb2NpYWwgbWVkaWEgc2F5YSAvIGRvbmF0ZSBkaSBnaXRo
+dWIgeWEKCiMjIyBTb2NpYWwgTWVkaWEgTWUKCjEuIFtZb3V0dWJlXShodHRw
+czovL3lvdXR1YmUuY29tL0BhemthZGV2KQoyLiBbVGVsZWdyYW1dKGh0dHBz
+Oi8vdC5tZS9hemthZGV2KQoKLS0tCgpMaXZlIERlbW86Cmh0dHBzOi8vY29k
+ZS1zaG90LWF6a2FkZXYudXAucmFpbHdheS5hcHAvP3RpdGxlPWF6a2EmY29k
+ZT1hemthZGV2CgoKIyMjIERldmVsb3BtZW50CgoxLiBDbG9uZSBzb3VyY2Ug
+Y29kZSAKCiAgICBgYGBiYXNoCiAgICBnaXQgY2xvbmUgaHR0cHM6Ly9naXRo
+dWIuY29tL2F6a2FkZXYvY29kZV9zaG90X2ZsdXR0ZXIuZ2l0CiAgICBjZCBj
+b2RlX3Nob3RfZmx1dHRlcgogICAgYGBgCgoyLiBEb3dubG9hZCBwYWNrYWdl
+CgogICAgYGBgYmFzaAogICAgZmx1dHRlciBwdWIgZ2V0CiAgICBgYGAKCjMu
+IFJ1bm5pbmcKCiAgICBgYGBiYXNoCiAgICBmbHV0dGVyIHJ1bgogICAgYGBg
+CgpUZXN0aW5nIExvY2FsOgoKaHR0cDovL2xvY2FsaG9zdDo4MDgwLz90aXRs
+ZT1hemthZGV2JmNvZGU9YXprYWRldgo=
 
-Code to Image Flutter, Project experiment bikin screenshot dengan flutter
-
-
-![Result](/screenshot/result.png)
-
-
-
-https://user-images.githubusercontent.com/82513502/202985333-ade8e7f7-5e8d-490f-922e-628527c15fab.mp4
-
-
-
-https://user-images.githubusercontent.com/82513502/203243242-39adc783-ae74-46b1-80da-ec590f8c747a.mp4
-
-
----
-
-<p align="center">
-    <a href="https://github.com/azkadev">
-        <img src="https://telegra.ph/file/e90bdeab8390b8c0d9df2.png" alt="Specta"
-            width="312"
-            height="312">
-    </a>
-    <br>
-    <a href="https://youtube.com/c/galaxeus">
-        <img
-            src="https://raw.githubusercontent.com/azkadev/azkadev/main/assets/images/powered_galaxeus.png"
-            alt="galaxeus"
-            width="350"
-            height="80"
-        >
-    </a>
-    <br>
-    <b>Author Azkadev 🔥</b>
-    <br>
-</p>
- 
-### About this
-
-Repo ini hanya project biasa, dan hanya sebuah testing kalau flutter gak cuma bikin app tapi bikin gambar apapun tergantung pilot
-
-### Support
-> Tolong beri saya dukungan dengan cara follow up semua social media saya / donate di github ya
-
-### Social Media Me
-
-1. [Youtube](https://youtube.com/@azkadev)
-2. [Telegram](https://t.me/azkadev)
-
----
-
-Live Demo:
-https://code-shot-azkadev.up.railway.app/?title=azka&code=azkadev
-
-
-### Development
-
-1. Clone source code 
-
-    ```bash
-    git clone https://github.com/azkadev/code_shot_flutter.git
-    cd code_shot_flutter
-    ```
-
-2. Download package
-
-    ```bash
-    flutter pub get
-    ```
-
-3. Running
-
-    ```bash
-    flutter run
-    ```
-
-Testing Local:
-
-http://localhost:8080/?title=azkadev&code=azkadev
+<!-- START GLOBAL CORPORATION -->
+404: Not Found
+<!-- END GLOBAL CORPORATION -->
